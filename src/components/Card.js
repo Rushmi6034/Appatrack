@@ -1,7 +1,42 @@
 import React from 'react';
+import img from "../assets/0.jpeg";
+import img1 from "../assets/0-30.jpeg";
+import img2 from "../assets/30-50.jpeg";
+import img3 from "../assets/50-70.jpeg";
+import img4 from "../assets/70.jpeg";
+import img5 from "../assets/70-150.jpeg";
+import img6 from "../assets/150.jpeg";
+import img7 from "../assets/301.jpeg";
+
 
 const Card = ({ name, load, location, speed }) => {
-  // Define the handleCardClick function outside the JSX
+  // Function to determine the speed image based on the speed value
+  const speedValue = parseInt(speed.replace('km/hr', ''), 10);
+  const getSpeedImage = (speed) => {
+    if (speedValue == 0) {
+      return img; // Path to the image for speed below 30 km/hr
+    }else if (speedValue >0 && speedValue<30) {
+      return img1;
+    }else if (speedValue == 30) {
+      return img7;
+    }
+    
+
+    else if (speedValue>30 && speedValue<=50) {
+      return img2; // Path to the image for speed 30-50 km/hr
+    }
+     else if (speedValue > 50 && speedValue < 70) {
+      return img3; // Path to the image for speed 30-50 km/hr
+    }
+     else if (speedValue == 70) {
+      return img4; // Path to the image for speed 50-70 km/hr
+    } else if (speedValue > 70 && speedValue < 150) {
+      return img5; // Path to the image for speed 70-90 km/hr
+    } else if (speedValue >= 150) {
+      return img6; // Path to the image for speed 90-110 km/hr
+    } 
+  };
+
   const handleCardClick = () => {
     const htmlContent = `
       <html>
@@ -38,42 +73,16 @@ const Card = ({ name, load, location, speed }) => {
             tr:hover {
               background-color: #f1f1f1;
             }
-            .back {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border-radius: 3px;
-              letter-spacing: 1px;
-              transition: all 0.2s linear;
-              cursor: pointer;
-              border: none;
-              background: none;
-              padding: 10px 14px;
-              position: fixed;
-              top: 30px;
-              left: 30px;
-              z-index: 1000;
-              font-weight: bold;
+            .image{
+            width:20px;
+            height:auto;
+            margin-bottom:50px;
             }
-            .back > svg {
-              font-size: 25px;
-              transition: all 0.4s ease-in;
-              color: black;
-              font-weight: bold;
-            }
-            .back:hover > svg {
-              font-size: 1.2em;
-              transform: translateX(-5px);
-              font-weight: bold;
-            }
+
+           
           </style>
         </head>
         <body>
-          <button class="back" onclick="window.location.href='/dashboard'">
-            <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
-              <path d="M874.690416 495.52477c0 11.2973-9.168824 20.466124-20.466124 20.466124l-604.773963 0 188.083679 188.083679c7.992021 7.992021 7.992021 20.947078 0 28.939099-4.001127 3.990894-9.240455 5.996574-14.46955 5.996574-5.239328 0-10.478655-1.995447-14.479783-5.996574l-223.00912-223.00912c-3.837398-3.837398-5.996574-9.046027-5.996574-14.46955 0-5.433756 2.159176-10.632151 5.996574-14.46955l223.019353-223.029586c7.992021-7.992021 20.957311-7.992021 28.949332 0 7.992021 8.002254 7.992021 20.957311 0 28.949332l-188.073446 188.073446 604.753497 0C865.521592 475.058646 874.690416 484.217237 874.690416 495.52477z"></path>
-            </svg>
-          </button>
           <h1>${name} Data</h1>
           <table>
             <thead>
@@ -82,7 +91,6 @@ const Card = ({ name, load, location, speed }) => {
                 <th>Load</th>
                 <th>Location</th>
                 <th>Speed</th>
-
               </tr>
             </thead>
             <tbody>
@@ -90,8 +98,7 @@ const Card = ({ name, load, location, speed }) => {
                 <td>${name}</td>
                 <td>${load}</td>
                 <td>${location}</td>
-                <td>${speed}</td>
-
+                <td>${speed} km/hr</td>
               </tr>
             </tbody>
           </table>
@@ -105,13 +112,17 @@ const Card = ({ name, load, location, speed }) => {
     newTab.document.close();
   };
 
+  // Get the image dynamically based on the speed
+  const image = getSpeedImage(speed);
+
   // Return JSX
   return (
     <div className="dustbin-card" onClick={handleCardClick}>
+      <img src={image} alt="Speed Indicator"  className="image" />
       <h2>{name}</h2>
       <p>Load: {load}</p>
       <p>Location: {location}</p>
-      <p>Speed: {speed}</p>
+      <p>Speed: {speed} km/hr</p>
     </div>
   );
 };

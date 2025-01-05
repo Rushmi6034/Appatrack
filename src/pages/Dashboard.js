@@ -4,10 +4,12 @@ import { database } from "../firebase-config";  // Import database from firebase
 import { Link } from 'react-router-dom';  // Add this import
 import DustbinCard from '../components/Card';
 import '../styles/Dashboard.css';  // Custom CSS for styling
+// import {auth} from "../firebase-config";
 
 const Dashboard = () => {
   const [eBikes, setEBikes] = useState([]);  // State to hold the fetched data
   const [loading, setLoading] = useState(true);  // Loading state
+  // const [username, setUsername] = useState(''); 
 
   useEffect(() => {
     // Reference to the location in your Realtime Database where e-bike data is stored
@@ -19,6 +21,20 @@ const Dashboard = () => {
         const data = snapshot.val();
         console.log("here");
         // Transform the data into a suitable format
+
+        // const userId = auth.currentUser?.uid; // Get the current user's ID
+        // const userRef = ref(database, );
+        
+        // get(userRef).then((snapshot) => {
+        //   if (snapshot.exists()) {
+        //     setUsername(snapshot.val().username || 'User');
+        //   } else {
+        //     console.log("No username found.");
+        //   }
+        // }).catch((error) => {
+        //   console.error("Error fetching username:", error);
+        // });
+
         const transformedData = Object.keys(data).map(key => ({
           id: key,
           name: key,  // The name of the e-bike is its key (e.g., e-bike 1, e-bike 2)
@@ -59,7 +75,7 @@ const Dashboard = () => {
       </nav>
       
       <div className="dashboard-container">
-        <h1>Welcome to AppaTrack!!!</h1>
+        <h1>Welcome!!!</h1>
         
         <div className="dustbin-cards">
           {eBikes.map((bike) => (

@@ -7,8 +7,8 @@ body {
   
   .dashboard-page{
     /* background: linear-gradient(to right,  rgba(61, 160, 68, 0.8),#84d484); */
-    /* background-image: url('../assests/re.jpeg'); */
-    background: linear-gradient(to bottom, #ffffff, #195693);
+    background-image: url('../assets/bga2.jpeg');
+    /* background: linear-gradient(to bottom, #ffffff, #195693); */
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -100,7 +100,7 @@ body {
   
   /* Dashboard Container */
   .dashboard-container {
-    padding: 100px;
+    padding: 150px;
     margin-bottom: auto;
     /* min-height: calc(100vh - 20px); Ensure the container covers the viewport height, minus navbar height */
     height: 100vh;
@@ -118,7 +118,7 @@ body {
     text-align: center;
     font-size: 2.5rem; /* Default size */
     margin-bottom: 20px;
-    color: black;
+    color: white;
   }
   
   /* Dustbin Cards */
@@ -131,18 +131,16 @@ body {
   }
   
   /* Dustbin Card */
-  .dustbin-card {
+  /* .dustbin-card {
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* background-color: #85e18b; Slightly off-white for better contrast */
-    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.8),  rgba(255, 255, 255, 0.8)); */
-  
+    
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
-    width: 100%; /* Ensure the card takes full width of the container */
-  }
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    width: 100%; 
+  } */
   
   .dustbin-card:hover {
     transform: scale(1.05);
@@ -210,3 +208,40 @@ body {
     }
   }
   
+
+
+
+
+  /* Card container styling */
+.dustbin-card {
+  width: 300px;
+  margin: 15px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.8),  rgba(255, 255, 255, 0.8));
+}
+
+/* Image resizing */
+.image {
+  width: 150px; /* Set the desired width */
+  height: auto; /* Maintain the aspect ratio */
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+/* Other text elements in the card */
+.dustbin-card h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* .dustbin-card p {
+  margin: 5px 0;
+  color: #555;
+} */

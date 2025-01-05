@@ -11,7 +11,7 @@ const About = () => {
     <nav>
             <div className="nav-container">
               <div className="log">
-                🗑️ WestaBin
+                AppaTrack
               </div>
               <div className="nav-links">
                 <Link to="/" className="active">Home</Link>
@@ -48,9 +48,10 @@ const About = () => {
         <div className="vision">
           <h2>Our Vision</h2>
           <p>
-            Welcome to <strong>WestaBin</strong>, a cutting-edge smart dustbin
-            designed to transform waste disposal and management into an efficient,
-            hygienic, and eco-friendly process.
+          Welcome to AppaTrack!</p>
+         <p> At AppaTrack, we are revolutionizing the way e-bike owners and riders experience safety, efficiency, and convenience. With our cutting-edge tracking solutions, managing your e-bike has never been easier.
+
+          Whether you’re monitoring your e-bike’s real-time location, analyzing ride data, or ensuring its safety, AppaTrack is here to make your e-biking journey smarter and more reliable.
           </p>
           <p>
             At WestaBin, we believe in creating a cleaner, smarter, and more
