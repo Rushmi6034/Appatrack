@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.home-page {
+   
+    background-image: url("../assets/e.jpeg");
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ 
+}
+
+nav {
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.0);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1470px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #021528;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0a3f74;
+    font-weight: 600;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 1300px;
+    animation: fadeIn 1s ease-out;
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(0px);
+}
+
+
+.butto {
+    display: inline-block;
+    padding: 5px;
+    background: #0a3f74;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.butto a {
+    color: white !important;
+    padding: 7px 14px;
+    display: inline-block;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    color: #0a3f74;
+    margin-bottom: 1rem;
+    /* margin-top: 20px; */
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #0a3f74;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    /* margin-top: ; */
+}
+
+.features {
+    display: flex;
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 0 1rem;
+    justify-content: center;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 60px;
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 1.1rem;
+    backdrop-filter: blur(5px);
+    margin-top: 15px;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #0a3f74;
+    margin-bottom: 2rem;
+}
+
+.btns {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a3f74;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btns:hover {
+    background-color: white;
+    color: #3a72aa;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+/* .butto{
+    background-color: #3a72aa;
+}
+
+.butto a {
+    color: white !important;
+    padding: 7px 14px;
+    display: inline-block;
+} */
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .home-page{
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        margin-top: 200px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 20px;
+        font-size: 1rem;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        flex-direction: row;
+    }
+
+    .log {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .butto{
+        align-items: end;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .feature-card {
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .feature-icon {
+        font-size: 2rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .btns {
+        padding: 8px 16px;
+    }
+
+    .log {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,222 @@
+body {
+    /* background: linear-gradient(#01071b, #94abc0); */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; Prevents scrollbars caused by animation */
+    background-color: #FEFCFB;
+  }
+  
+  /* .signup-page{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(61, 160, 68, 0.8));
+
+  } */
+  /* .signup-page{
+    background-image: url('../assests/demo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+  } */
+  .mains-container {
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    gap: 20px;
+    background: linear-gradient(to bottom, #ffffff, #195693);  
+            padding: 20px;
+  }
+  .logo {
+              text-align: center;
+              margin-bottom: 2rem;
+              color: #0a3f74;
+  /* color: #023336; */
+              font-size: 1.5rem;
+              font-weight: bold;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+          }
+  
+  /* Animation for floating effect */
+  @keyframes move {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(20px); /* Float slightly up and to the side */
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
+  
+  
+  .signup-container {
+     /* background: linear-gradient(#b7bbc7, #021d35);  */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(80, 165, 85, 0.8)); */
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    color:white;
+  }
+  
+  
+  .back-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* background-color: #eeeeee4b; */
+      border-radius: 3px;
+      letter-spacing: 1px;
+      transition: all 0.2s linear;
+      cursor: pointer;
+      border: none;
+background: none;
+      padding: 10px 14px;
+     
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      z-index: 1000;
+      font-weight: bold;
+  }
+  
+  .back-button > svg {
+      /* margin-right: 5px; */
+      font-size: 25px;
+      transition: all 0.4s ease-in;
+      color: black;
+      font-weight: bold;
+  }
+  
+  .back-button:hover > svg {
+      font-size: 1.2em;
+      transform: translateX(-5px);
+      font-weight: bold;
+  }
+  
+  /* .back-button:hover {
+      box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+      transform: translateY(-2px);
+  }  */
+  .form-label {
+    display: block;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 3px;
+  }
+  
+  .signup-container h1 {
+    font-family: 'Nunito', sans-serif; /* Bold and rounded font for headings */
+    font-size: 2.2rem; /* Slightly larger for emphasis */
+    color: white; /* Bold blue color */
+    margin-bottom: 20px;
+  }
+  
+  .signup-container p {
+    font-family: 'Roboto', sans-serif; /* Secondary font for descriptive text */
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1.5px solid #0a3f74;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    outline: none; /* Remove default outline */
+  }
+  
+  input:focus {
+    outline: none;
+    border: 2px solid #0a3f74;
+    box-shadow: 0 0 5px #4f7ba6;
+  }
+  
+  /* Override any browser-specific focus styles */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    border: 2px solid #0a3f74;
+    outline: none;
+  }
+  
+  
+  .btn {
+    width: 100%; /* Full width for balance */
+    padding: 10px; /* Slightly larger padding for a comfortable look */
+    background-color: #0a3f74; /* Bold deep blue */
+    color: #FEFCFB; /* Bright white text */
+    border: none; /* No border for a clean design */
+    border-radius: 8px; /* Rounded corners for a modern touch */
+    font-size: 1rem; /* Slightly larger text size */
+    font-family: 'Arial', sans-serif; /* Friendly and approachable font */
+    font-weight: 700; /* Bold text for emphasis */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: 15px;
+  }
+  
+  .btn:hover {
+    background-color: #3a72aa; /* Teal color from the palette */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight shadow for a pop effect */
+    transform: scale(1.02); /* Subtle zoom effect on hover */
+  }
+  
+  .btn:active {
+    background-color: #0a3f74; /* Darker blue for pressed state */
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.3); /* Inner shadow for depth */
+  }
+  
+  
+  .signup-container footer {
+    font-family: 'Roboto', sans-serif; /* Simple and clean font for footer */
+    color: rgb(56, 154, 56); /* Footer text color */
+    font-size: 0.9rem;
+    margin-top: 20px;
+    text-align: center; /* Center-align footer */
+  }
+
+  .form{
+    padding: 10px;
+    text-align: left;
+  }
+  .text-small {
+    font-size: 0.875rem;
+    color:black;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  .text-small a{
+    
+    font-size: 0.875rem;
+
+    color: white;
+    font-weight: bold;
+
+    
+  }
+
+  .text-small a:hover{
+    color: #0a3f74;
+    /* text-decoration: underline; */
+  }
