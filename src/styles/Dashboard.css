@@ -1,219 +1,202 @@
 /* General Styling */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
-  
-  .dashboard-page{
-    /* background: linear-gradient(to right,  rgba(61, 160, 68, 0.8),#84d484); */
-    background-image: url('../assets/bga2.jpeg');
-    /* background: linear-gradient(to bottom, #ffffff, #195693); */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      overflow: auto;
-  }
-  .back {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background-color: #eeeeee4b; */
-    border-radius: 3px;
-    letter-spacing: 1px;
-    transition: all 0.2s linear;
-    cursor: pointer;
-    border: none;
-  background: none;
-    padding: 10px 14px;
-   
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    z-index: 1000;
-    font-weight: bold;
-  }
-  
-  .back > svg {
-    /* margin-right: 5px; */
-    font-size: 25px;
-    transition: all 0.4s ease-in;
-    color: black;
-    font-weight: bold;
-  }
-  
-  .back:hover > svg {
-    font-size: 1.2em;
-    transform: translateX(-5px);
-    font-weight: bold;
-  }
-  
-  nav {
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.0);
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .navs-container {
-    max-width: 1470px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logs {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .logs:hover{
-    color: #0a3f74;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
 
-  }
-  
-  .navs-links {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-  }
-  
-  .navs-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
-  }
-  
-  .navs-links a:hover {
-    color: #0a3f74;
-    transform: scale(1.1);
-  }
-  
-  
-  /* Dashboard Container */
-  .dashboard-container {
-    padding: 150px;
-    margin-bottom: auto;
-    /* min-height: calc(100vh - 20px); Ensure the container covers the viewport height, minus navbar height */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; /* Centers the content vertically */
-    /* align-items: center; Centers the content horizontally  */
-    box-sizing: border-box;
+.dashboard-page{
+  /* background: linear-gradient(to right,  rgba(61, 160, 68, 0.8),#84d484); */
+  background-image: url('../assets/bga2.jpeg');
+  /* background: linear-gradient(to bottom, #ffffff, #195693); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: auto;
+}
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #eeeeee4b; */
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: none;
+background: none;
+  padding: 10px 14px;
+ 
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.back > svg {
+  /* margin-right: 5px; */
+  font-size: 25px;
+  transition: all 0.4s ease-in;
+  color: black;
+  font-weight: bold;
+}
+
+.back:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+  font-weight: bold;
+}
+
+nav {
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.0);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navs-container {
+  max-width: 1470px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logs:hover{
+  color: #0e75dd;
+
+}
+
+.navs-links {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.navs-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navs-links a:hover {
+  color: #3a72aa;
+  transform: scale(1.1);
 }
 
 
-  
-  /* Header Section */
-  .dashboard-container h1 {
-    text-align: center;
-    font-size: 2.5rem; /* Default size */
-    margin-bottom: 20px;
-    color: white;
-  }
-  
-  /* Dustbin Cards */
-  .dustbin-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default: 3 cards in a row */
-    gap: 40px; /* Adjust the gap for better spacing */
-    margin-top: 20px;
-    padding: 30px;
-  }
-  
-  /* Dustbin Card */
-  /* .dustbin-card {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    width: 100%; 
-  } */
-  
-  .dustbin-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dustbin-card h3 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .dustbin-card p {
-    font-size: 1rem;
-    color: #555;
-    margin: 5px 0;
-  }
-  
-  .dustbin-image {
-    width: 200px; /* Adjust the size as needed */
-    height: 200px;
-    object-fit: contain; /* Ensure the image fits well */
-    margin-bottom: 15px; /* Add spacing between the image and text */
-  }
-  
-  /* Navigation Bar */
-  
-  
-  .butto {
-    background-color: #0a3f74;
-    border-radius: 5px;
-    padding: 2px 5px;
-  }
-  
-  .butto a {
-    color: white;
-    text-decoration: none;
-    /* font-weight: bold; */
-  }
-  
-  /* Responsive Design */
-  
-  /* For screens smaller than 768px */
-  @media (max-width: 768px) {
-    .dustbin-cards {
-        grid-template-columns: repeat(1, 1fr); /* 2 cards in a row */
-        gap: 20px;
-    }
-  
-    .dashboard-container h1 {
-        font-size: 2rem;
-    }
-  }
-  
-  /* For screens smaller than 480px */
-  @media (max-width: 480px) {
-    .dustbin-cards {
-        grid-template-columns: 1fr; /* 1 card in a row */
-        gap: 15px;
-    }
-  
-    .dashboard-container h1 {
-        font-size: 1.8rem;
-    }
-  }
-  
+/* Dashboard Container */
+.dashboard-container {
+  padding: 100px;
+  margin-bottom: auto;
+  /* min-height: calc(100vh - 20px); Ensure the container covers the viewport height, minus navbar height */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; /* Centers the content vertically */
+  /* align-items: center; Centers the content horizontally  */
+  box-sizing: border-box;
+}
 
 
 
+/* Header Section */
+.dashboard-container h1 {
+  text-align: center;
+  font-size: 2.5rem; /* Default size */
+  margin-bottom: 20px;
+  color: white;
+}
 
-  /* Card container styling */
-.dustbin-card {
+/* Dustbin Cards */
+.dustbin-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 cards in a row */
+  gap: 40px; /* Adjust the gap for better spacing */
+  margin-top: 20px;
+  padding: 30px;
+}
+
+/* Dustbin Card */
+/* .dustbin-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  width: 100%; 
+} */
+
+.dustbin-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dustbin-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.dustbin-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.dustbin-image {
+  width: 200px; /* Adjust the size as needed */
+  height: 200px;
+  object-fit: contain; /* Ensure the image fits well */
+  margin-bottom: 15px; /* Add spacing between the image and text */
+}
+
+/* Navigation Bar */
+
+
+.butto {
+  /* background-color: #0a3f74;
+  border-radius: 5px;
+  padding: 2px 5px; */
+
+  background-color: #0a3f74; /* Button color */
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center; /* Center text horizontally */
+  line-height: normal; /* Ensure proper vertical spacing */
+  cursor: pointer;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center;
+}
+
+.butto a {
+  color: white;
+  text-decoration: none;
+  /* font-weight: bold; */
+}
+
+ /* Card container styling */
+ .dustbin-card {
   width: 300px;
   margin: 15px;
   padding: 20px;
@@ -241,7 +224,94 @@ body {
   margin-bottom: 15px;
 }
 
+
 /* .dustbin-card p {
   margin: 5px 0;
   color: #555;
 } */
+
+
+/* Responsive Design */
+
+/* For tablets and smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 50px 15px;
+  }
+
+  .dashboard-container h1 {
+    font-size: 2rem;
+  }
+
+  .dustbin-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-left: 25px;
+  }
+
+  .dustbin-card {
+    padding: 15px;
+  }
+
+ 
+
+  nav {
+    padding: 0.5rem 1rem;
+  }
+
+  .navs-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align to the left */
+  }
+
+  .logs {
+    font-size: 1.5rem; 
+    margin-bottom: 10px;/* Reduce logo size */
+  }
+
+  .navs-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 20px; /* Adjust spacing between links */
+    width: 100%; /* Take full width of the container */
+    margin-top: 10px; /* Add spacing below the logo */
+    margin-right: 10px;
+  }
+
+  .navs-links a {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+     /* Add padding for better touch targets */
+    width: 100%; /* Ensure full clickable width */
+    text-align: center; /* Align links to the left */
+  }
+  .butto{
+    text-align: center;
+  }
+
+  
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 20px 10px;
+  }
+
+  .dashboard-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .dustbin-cards {
+    grid-template-columns: 1fr; /* Single-column layout */
+    gap: 10px;
+    margin-left: 30px;
+  }
+
+  .dustbin-card {
+    padding: 10px;
+  }
+
+
+  
+  
+  
+}

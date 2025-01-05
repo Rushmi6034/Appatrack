@@ -4,6 +4,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
     /* overflow: hidden; */
       /* background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(61, 160, 68, 0.8)); */
   
@@ -13,10 +14,11 @@
     /* display: flex; */
     /* justify-content: center;
     align-items: center; */
-    height: 100vh;
+    /* height: 100vh; */
     gap: 20px;
     /* background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(61, 160, 68, 0.8)); */
     padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #195693); 
   }
   
   .about-header {
@@ -82,33 +84,15 @@
       margin-bottom: "30px";
     }
   
-    .about-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      padding: 30px;
-      max-width: 1200px;
-      /* margin: 0 auto; */
-      margin-left: auto;
-    }
     
-    .vision {
-      background: #e8f5e9;
-      /* border-radius: 8px; */
-      padding: 35px;
-      /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-      /* background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(61, 160, 68, 0.8)); */
-      background: rgba(0, 0, 0, 0);
-      width: 100%;
-      max-width: 900px;
-    }
+    /*  */
     
     .vision h2 {
       font-size: 1.8rem;
-      color: #2e7d32;
+      color: #0a3f74;
       text-transform: uppercase;
       margin-bottom: 15px;
+      text-align: center;
     }
     
     .vision p {
@@ -157,20 +141,7 @@
     
   
   
-    .image-container {
-      flex: 1;
-      max-width: 40%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
     
-    .image-container img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
   
     /* .vision {
       flex: 1;
@@ -183,7 +154,7 @@
     
     .vision h2 {
       font-size: 1.8rem;
-      color: #2e7d32;
+      color: #0a3f74;
       text-transform: uppercase;
       margin-bottom: 15px;
     }
@@ -192,74 +163,104 @@
       font-size: 1.2rem;
       line-height: 1.8;
       margin-bottom: 15px;
-      color: #555;
+      color: black;
+    }
+
+    .about-content {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 40px;
+      max-width: 1500px;
+      margin: 0 auto;
     }
     
-  
-    /* General Styles for Mobile */
-  @media screen and (max-width: 768px) {
-  
-    .about-page{
-          background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(61, 160, 68, 0.8));
-      
-    }
-    .nav-container {
-      flex-direction: column;
+    .image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
       align-items: center;
+      max-width: 40%; /* Adjust width as needed */
+      position: fixed;
     }
-  
-    .nav-links {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .log {
-      margin-bottom: 15px;
-      text-align: center;
-    }
-  
-    .about-header h1 {
-      font-size: 2rem;
-      margin-top: 20px;
-    }
-  
-    .about-content {
-      padding: 20px;
-      width: 100%;
-    }
-  
-    .vision, .mission {
-      padding: 20px;
-      max-width: 100%;
-      margin: 0 auto;
-    }
-  
-    ul {
-      padding: 0;
-      margin: 0 auto;
-      width: 100%;
-    }
-  
-    li {
-      padding-left: 20px;
-    }
-  
-    .vision h2 {
-      font-size: 1.5rem;
-    }
-  
-    .vision p {
-      font-size: 1rem;
-    }
-  
+    
     .image-container img {
       width: 100%;
       height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+    
+    .vision {
+      flex: 2;
+      background: rgba(0, 0, 0, 0);
+      padding: 40px;
+      width: 100%;
+      max-width: 1500px; /* Adjust width as needed */
+      text-align: left;
+
+    }
+    
+    
   
-    .main {
-      height: auto; /* Remove fixed height for better scrolling */
-      padding: 15px;
-    }
+    /* General Styles for Mobile */
+    @media screen and (max-width: 768px) {
+      *{
+        box-sizing: border-box;
+      }
+      .about-page {
+          background: linear-gradient(to bottom, #ffffff, #195693);
+          background-attachment: scroll;
+          background-size: cover;
+          min-height: 100vh;
+          width: 100%;
+      }
+  
+      .about-header h1 {
+          font-size: 2rem;
+          margin-top: 180px; /* Adjust to avoid overlap */
+          text-align: center;
+          margin-top: 214px;
+      }
+  
+      .about-content {
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 20px;
+          width: 100%;
+      }
+  
+      .image-container img {
+          width: 100%;
+          height: auto;
+      }
+  
+      .vision {
+          padding: 20px;
+          margin: 0 auto;
+          width: 90%;
+          box-shadow: none; /* Clean look for mobile */
+      }
+  
+      .nav-container {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+      }
+  
+      .nav-links {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+      }
+  
+      .main {
+          height: auto;
+          padding: 15px;
+          width: 100%;
+      }
   }
   

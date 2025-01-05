@@ -7,19 +7,19 @@ import '../styles/About.css';
 const About = () => {
   return (
     <>
-    <div className="aboutus">
+    <div className="aboutus1">
     <nav>
             <div className="nav-container">
               
               <div className="log">
                 AppaTrack
               </div>
-              <div className="nav-links">
-                <Link to="/" className="active">Home</Link>
-                <Link to="/aboutus">About Us</Link>
+              <div className="navs-links">
+                <Link to="/dashboard" className="active">Home</Link>
+                <Link to="/aboutus1-dashboard">About Us</Link>
                 <Link to="#">Contact</Link>
                 <div className="butto">
-                  <Link to="/login">Get Started</Link>
+                  <Link to="/login">Logout</Link>
                 </div>
               </div>
             </div>

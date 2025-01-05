@@ -65,7 +65,7 @@ const Dashboard = () => {
           <div className="logs">AppaTrack</div>
           <div className="navs-links">
             <Link to="/" >Home</Link>
-            <Link to="/aboutus">About Us</Link>
+            <Link to="/aboutus1-dashboard">About Us</Link>
             <Link to="#">Contact</Link>
             <div className="butto">
               <Link to="/login">Logout</Link>
