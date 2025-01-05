@@ -1,4 +1,4 @@
-// import React, { useEffect, useRef } from 'react';
+import  { useEffect, useRef } from 'react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import Navbar from '../components/Navbar';
@@ -6,36 +6,36 @@ import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 
 const Home = () => {
-  // const cardsRef = useRef([]);
+  const cardsRef = useRef([]);
 
-  // useEffect(() => {
-  //   const checkScroll = () => {
-  //     cardsRef.current.forEach(card => {
-  //       if (card) {
-  //         const cardTop = card.getBoundingClientRect().top;
-  //         const triggerBottom = window.innerHeight * 0.8;
+  useEffect(() => {
+    const checkScroll = () => {
+      cardsRef.current.forEach(card => {
+        if (card) {
+          const cardTop = card.getBoundingClientRect().top;
+          const triggerBottom = window.innerHeight * 0.8;
           
-  //         if (cardTop < triggerBottom) {
-  //           card.style.opacity = '1';
-  //           card.style.transform = 'translateY(0)';
-  //         }
-  //       }
-  //     });
-  //   };
+          if (cardTop < triggerBottom) {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }
+        }
+      });
+    };
 
-  //   cardsRef.current.forEach(card => {
-  //     if (card) {
-  //       card.style.opacity = '0';
-  //       card.style.transform = 'translateY(20px)';
-  //       card.style.transition = 'all 0.5s ease-out';
-  //     }
-  //   });
+    cardsRef.current.forEach(card => {
+      if (card) {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.5s ease-out';
+      }
+    });
 
-  //   window.addEventListener('scroll', checkScroll);
-  //   checkScroll();
+    window.addEventListener('scroll', checkScroll);
+    checkScroll();
 
-  //   return () => window.removeEventListener('scroll', checkScroll);
-  // }, []);
+    return () => window.removeEventListener('scroll', checkScroll);
+  }, []);
 
   
 
@@ -58,7 +58,7 @@ const Home = () => {
           </nav>
       <section className="hero">
           <div className="hero-content">
-            <h1>Welcome to WastaBin</h1>
+            <h1>Welcome to AppaTrack</h1>
             {/* <p className="subtitle">Revolutionizing Waste Management with Smart Technology</p> */}
 
             {/* Features */}
@@ -72,17 +72,17 @@ const Home = () => {
               </div>
               <div className="feature-card">
                 <div className="feature-icon">
-                  <img src="./assests/profit.gif" width="50px" height="50px" alt="Analytics" />
+                  <img src="./assets/perf.gif" width="70px" height="70px" alt="Analytics" />
                 </div>
-                <h3>Analytics</h3>
-                <p>Get detailed insights and statistics on waste collection</p>
+                <h3>Performance Analytics</h3>
+                <p>Analyze eBike performance, battery status, and travel history with detailed reports.</p>
               </div>
               <div className="feature-card">
                 <div className="feature-icon">
-                  <img src="./assests/place1.gif" width="50px" height="50px" alt="Location tracking" />
+                  <img src="./assets/bat.gif" width="70px" height="70px" alt="Location tracking" />
                 </div>
-                <h3>Location Tracking</h3>
-                <p>GPS-enabled tracking for all smart bins</p>
+                <h3>Battery Monitoring</h3>
+                <p>Monitor the battery levels of e-bikes to prevent downtime</p>
               </div>
             </div>
 
