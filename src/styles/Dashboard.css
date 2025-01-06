@@ -122,7 +122,7 @@ nav {
 }
 
 /* Dustbin Cards */
-.dustbin-cards {
+.cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Default: 3 cards in a row */
   gap: 40px; /* Adjust the gap for better spacing */
@@ -142,19 +142,19 @@ nav {
   width: 100%; 
 } */
 
-.dustbin-card:hover {
+.card:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.dustbin-card h3 {
+.card h3 {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 15px;
 }
 
-.dustbin-card p {
+.card p {
   font-size: 1rem;
   color: #555;
   margin: 5px 0;
@@ -196,7 +196,7 @@ nav {
 }
 
  /* Card container styling */
- .dustbin-card {
+ .card {
   width: 300px;
   margin: 15px;
   padding: 20px;
@@ -217,7 +217,7 @@ nav {
 }
 
 /* Other text elements in the card */
-.dustbin-card h2 {
+.back h2 {
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
@@ -243,13 +243,13 @@ nav {
     font-size: 2rem;
   }
 
-  .dustbin-cards {
+  .cards {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     margin-left: 25px;
   }
 
-  .dustbin-card {
+  .card {
     padding: 15px;
   }
 
@@ -300,13 +300,13 @@ nav {
     font-size: 1.8rem;
   }
 
-  .dustbin-cards {
+  .cards {
     grid-template-columns: 1fr; /* Single-column layout */
     gap: 10px;
     margin-left: 30px;
   }
 
-  .dustbin-card {
+  .card {
     padding: 10px;
   }
 

@@ -77,7 +77,7 @@ const Dashboard = () => {
       <div className="dashboard-container">
         <h1>Welcome!!!</h1>
         
-        <div className="dustbin-cards">
+        <div className="cards">
           {eBikes.map((bike) => (
             <DustbinCard 
               key={bike.id} 

@@ -6,6 +6,8 @@ import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
 import About from './components/About';
 import About1 from './components/Aboutus';
+import Card from './components/Card';
+import EbikeData from './components/EbikeData';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/aboutus-home" element={<div className="about-page"><About /></div>} />
         <Route path="/dashboard" element={<div className="dashboard-page"><Dashboard /></div>} />
         <Route path="/aboutus1-dashboard" element={<div className="about-page"><About1/></div>} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/ebike-data" element={<EbikeData />} />
 
       </Routes>
     </Router>

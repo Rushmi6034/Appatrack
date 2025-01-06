@@ -187,14 +187,14 @@ h1 {
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .home-page{
+    /* .home-page{
         width: fit-content;
         height: fit-content;
-    }
+    } */
     
     h1 {
         font-size: 2rem;
-        margin-top: 200px;
+        margin-top: 5000px;
     }
 
     .subtitle {
@@ -238,7 +238,8 @@ h1 {
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        margin-top: 5000px;
     }
 
     .subtitle {
